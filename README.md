@@ -1,9 +1,10 @@
-# Webpack-Typescript-Starter
-### Get started Using Webpack with Typescript
+# TED Talk Feed
+### Webpack + Typescript + Vue
 ======
 
 #####Install
 `npm install`
+`typings install`
 
 If you do not have Typescript installed: 
 `npm install typescript --g`
@@ -17,9 +18,3 @@ This repo comes pre-configured with sass-loader, autoprefixer, and typescript lo
 
 `webpack --watch` Watch for changes in Typescript and Sass assets and compiles.
 
-Check `webpack.config.js` to change setup or add addional plugins.
-
-####Frameworks
-I have setup webpack to come preconfigured for various javascript frameworks.
-
-Explore the branches to see the base setup for these frameworks.
