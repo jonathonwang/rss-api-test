@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TED Talk Feed</title>
+	<link rel="stylesheet" href="dist/css/app.css">
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-lg-12">
+			<h1 class="text-center"><span class="fa fa-check"></span> {{ testMessage }}</h1>
+				<div v-for="feed in feeds" class="col-lg-12" transition="slide-fade" track-by="$index">
+					<div class="row">
+						<div class="col-lg-10">
+							<h3><a :href="feed.link" target="_blank">Title: {{ feed.title }}</a></h3>
+							<h4>Author: {{ feed.author }}</h4>
+							<p>Content: {{{ feed.content }}}</p>
+							<p>Categories: 
+								<span v-for="category in feed.categories" class="badge badge-default">{{ category }}</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="dist/js/app.js"></script>
+</body>
+</html>

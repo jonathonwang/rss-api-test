@@ -1,0 +1,12 @@
+.slide-fade-transition {
+	height: auto;
+	opacity: 1;
+	transition: .75s ease all;
+}
+.slide-fade-enter, .slide-fade-leave {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	padding-bottom: 0;
+	padding-top: 0;
+}
