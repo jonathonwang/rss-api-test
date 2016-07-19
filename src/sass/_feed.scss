@@ -1,8 +1,8 @@
 .feed__container {
-	overflow: hidden;
+	// overflow: visible;
 	transition: .5s ease all;
 	background-color: $white;
-	margin-top: 20px;
+	margin-top: 40px;
 	box-shadow: 0 0 11px -2px rgba(0, 0, 0, .5);
 	&:hover {
 		transform: scale(1.02);
@@ -13,13 +13,16 @@
 		margin-top: 40px;
 		margin-bottom: 40px;
 		position: relative;
-		z-index: 100;
+		z-index: 105;
 		video {
 			display: block;
 			height: auto;
 		}
 		img {
 			display: none;
+		}
+		.btn-action {
+			z-index: 105;
 		}
 	}
 	video {
@@ -32,6 +35,12 @@
 		background-color: $white;
 		padding-bottom: 14px;
 		transition: .5s ease all;
+		.btn-action {
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			z-index: 90;
+		}
 		p {
 			margin-top: 25px;
 			margin-bottom: 10px;
@@ -53,4 +62,5 @@
 		}
 	}
 }
+
 

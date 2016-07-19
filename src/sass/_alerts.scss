@@ -1,0 +1,18 @@
+.alert {
+	position: fixed;
+	z-index: 110;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border: 0 solid transparent;
+	border-radius: 0;
+	color: $white;
+	font-size: 14px;
+	a {
+		color: $white;
+	}
+}
+
+.alert-danger {
+	background-color: $red;
+}

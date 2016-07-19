@@ -7,36 +7,32 @@
 	<link rel="stylesheet" href="dist/css/app.css">
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </head>
-<body>
-	<div class="overlay" v-if="typeof selectedEntry == 'Object'"></div>
+<body @keyup.esc="selectedEntry.title !== undefined ? selectEntry({}) : ''">
+
+	<!-- Alert Component for Error Displays to user -->
+	<alert :alert="alert" transition="fade" v-if="alert.visibility == true"></alert>
+
+	<!-- Dimming Overlay when feed entry is selected -->
+	<div class="overlay" v-if="selectedEntry.title !== undefined" transition="fade" @click.prevent="selectEntry({})">
+	</div>
+
 	<div class="container">
+
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="text-center">{{ title }}</h1>
-				<div class="row feed__container" v-if="feed.length > 0" v-for="entry in feed" transition="slide_fade" slide_fade="100" track-by="$index" :class="{ 'active' : selectedEntry == entry }">
-					<div class="feed__header" :class="{ 'col-lg-7 col-md-7 col-sm-12 col-xs-12' : selectedEntry == entry, 'col-lg-4 col-md-4 col-sm-12 col-xs-12' : selectedEntry !== entry }">
-						<video :src="entry.mediaGroups[0].contents[0].url" v-if="selectedEntry == entry" transition="fade" transition-mode="out-in" autoplay controls></video>
-						<img class="img-responsive" :src="entry.mediaGroups[0].contents[0].thumbnails[0].url" transition="fade" transition-mode="out-in" v-else alt="" @click.prevent="selectEntry(entry)">
-					</div>
-					<div class="feed__content" :class="{ 'col-lg-5 col-md-5 col-sm-12 col-xs-12' : selectedEntry == entry, 'col-lg-8 col-md-8 col-sm-12 col-xs-12' : selectedEntry !== entry }">
-						<h3>{{ entry.title }}</h3>
-						<p v-if="entry !== selectedEntry">{{{ entry.contentSnippet }}}</p>
-						<p v-else>{{{ entry.content }}}</p>
-						<!-- <p> -->
-							<!-- <span v-for="category in entry.categories" class="badge badge-default">{{ category }}</span> -->
-						<!-- </p> -->
-						<div class="btn-row">
-							<a :href="entry.link" target="_blank" class="btn btn-primary btn-action btn-md" :class="{ 'rotate-45' : selectedEntry == entry }" @click.prevent="selectEntry(entry)">+</a>
-						</div>
-						<br>
-					</div>
-				</div>
+				<h1 class="text-center text--white">{{ title }}</h1>
 
-				<div class="row" v-if="feed.length == 0" transition="slide_fade" slide_fade="100">
+				<!-- Component for each List Item (Video + content) -->
+				<talklist v-if="feed.length > 0" v-for="entry in feed" :entry="entry" transition="slide_fade" track-by="$index" :class="{ 'active' : selectedEntry == entry }"></talklist>
+
+				<!-- Show Loading Spinner if no feed Loaded -->
+				<loader v-if="feed.length == 0" transition="slide_fade"></loader>
+
+				<!-- Show Load More Button if there is a feed loaded -->
+				<div class="row" transition="slide_fade" v-if="feed.length >= 10">
 					<div class="col-lg-12">
 						<h3 class="text-center">
-							<span class="fa fa-spinner fa-pulse fa-fw"></span> 
-							Loading...
+							<button class="btn btn-primary" @click.prevent="loadMoreEntries()">Load More</button>
 						</h3>
 					</div>
 				</div>
