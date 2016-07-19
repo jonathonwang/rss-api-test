@@ -3612,6 +3612,10 @@ button.close {
   content: "\F00D";
 }
 
+.fa-search-plus:before {
+  content: "\F00E";
+}
+
 .fa-search-minus:before {
   content: "\F010";
 }
@@ -3760,6 +3764,10 @@ button.close {
   content: "\F051";
 }
 
+.fa-plus-circle:before {
+  content: "\F055";
+}
+
 .fa-minus-circle:before {
   content: "\F056";
 }
@@ -3790,6 +3798,10 @@ button.close {
 
 .fa-expand:before {
   content: "\F065";
+}
+
+.fa-plus:before {
+  content: "\F067";
 }
 
 .fa-minus:before {
@@ -3892,6 +3904,14 @@ button.close {
   content: "\F0CE";
 }
 
+.fa-google-plus-square:before {
+  content: "\F0D4";
+}
+
+.fa-google-plus:before {
+  content: "\F0D5";
+}
+
 .fa-columns:before {
   content: "\F0DB";
 }
@@ -3938,6 +3958,10 @@ button.close {
 
 .fa-h-square:before {
   content: "\F0FD";
+}
+
+.fa-plus-square:before {
+  content: "\F0FE";
 }
 
 .fa-angle-double-left:before {
@@ -4124,6 +4148,10 @@ button.close {
   content: "\F195";
 }
 
+.fa-plus-square-o:before {
+  content: "\F196";
+}
+
 .fa-google:before {
   content: "\F1A0";
 }
@@ -4208,6 +4236,10 @@ button.close {
   content: "\F233";
 }
 
+.fa-user-plus:before {
+  content: "\F234";
+}
+
 .fa-user-times:before {
   content: "\F235";
 }
@@ -4242,6 +4274,10 @@ button.close {
 
 .fa-500px:before {
   content: "\F26E";
+}
+
+.fa-calendar-plus-o:before {
+  content: "\F271";
 }
 
 .fa-calendar-minus-o:before {
@@ -4302,6 +4338,10 @@ button.close {
 
 .fa-first-order:before {
   content: "\F2B0";
+}
+
+.fa-google-plus-circle:before {
+  content: "\F2B3";
 }
 
 .fa-fa:before {
@@ -4395,6 +4435,49 @@ p {
 
 .btn-default:focus,.btn-default:hover {
   color: #0c7cd5;
+}
+
+@-webkit-keyframes btn-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes btn-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.btn-pulse {
+  -webkit-animation-name: btn-pulse;
+  animation-name: btn-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .rotate-45 {
@@ -4553,6 +4636,7 @@ img.img-responsive {
 body {
   padding-top: 50px;
   background-color: #263238;
+  padding-bottom: 30px;
 }
 
 .overlay {

@@ -1,6 +1,7 @@
 body {
 	padding-top: 50px;
-	background-color: #263238;
+	background-color: $dark-grey;
+	padding-bottom: 30px;
 }
 .overlay {
 	width: 100%;
@@ -8,6 +9,6 @@ body {
 	left: 0;
 	top: 0;
 	position: fixed;
-	background-color: rgba(#263238, .85);
+	background-color: rgba($dark-grey, .85);
 	z-index: 100;
 }
