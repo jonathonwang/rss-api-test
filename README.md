@@ -2,6 +2,9 @@
 ### Webpack + Typescript + Vue
 ======
 
+#####Preview
+[See Preview Here](https://htmlpreview.github.io/?https://github.com/jonathonwang/rss-api-test/blob/master/index.html)
+
 #####Install
 `npm install`
 `typings install`
