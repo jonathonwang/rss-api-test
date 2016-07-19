@@ -25,11 +25,12 @@ module.exports = {
 		new webpack.optimize.UglifyJsPlugin(),
 		new ExtractTextPlugin('css/app.css', {
 			allChunks: true
+		}),
+		new purify({
+			basePath: __dirname,
+			paths: [ '*.html' ],
+			minify: true
 		})
-		// new purify({
-			// basePath: __dirname,
-			// paths: [ '*.html' ]
-		// })
 	],
 	module: {
 		loaders: [

@@ -1,3 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900,300);
 
-$base-font: 'Lato', 'Helvetica', 'Helvetica Neue', 'arial' sans-serif; 
+$base-font: 'Roboto', 'Helvetica', 'Helvetica Neue', 'arial' sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $base-font;
+}
+
+p {
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.text--white {
+	color: $white;
+}

@@ -1,12 +1,32 @@
-.slide-fade-transition {
+.slide_fade-transition {
 	height: auto;
 	opacity: 1;
 	transition: .75s ease all;
 }
-.slide-fade-enter, .slide-fade-leave {
-	height: 0;
+.slide_fade-enter,
+.slide_fade-leave {
+	display: block;
 	opacity: 0;
-	overflow: hidden;
 	padding-bottom: 0;
 	padding-top: 0;
+}
+
+.slide-transition {
+	transition: .5s ease all;
+	display: block;
+	height: auto; 
+}
+.slide-enter,
+.slide-leave {
+	height: 0;
+	overflow: hidden;
+}
+
+.fade-transition {
+	transition: .5s ease all;
+	opacity: 1;
+}
+.fade-enter,
+.fade-leave {
+	opacity: 0;
 }
