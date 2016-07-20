@@ -2,6 +2,7 @@
 
 $base-font: 'Roboto', 'Helvetica', 'Helvetica Neue', 'arial' sans-serif;
 
+.giga,
 h1,
 h2,
 h3,
@@ -11,6 +12,10 @@ h6 {
 	font-family: $base-font;
 }
 
+.giga {
+	font-size: 44px;
+}
+
 p {
 	font-size: 15px;
 	line-height: 20px;
@@ -18,4 +23,13 @@ p {
 
 .text--white {
 	color: $white;
+}
+.text--light {
+	font-weight: 200;
+}
+.text--medium {
+	font-weight: 300;
+}
+.text--bold {
+	font-weight: 500;
 }

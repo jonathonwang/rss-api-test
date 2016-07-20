@@ -19,7 +19,8 @@ google.load('feeds','1');
 	const VueContainer = new Vue({
 		el: 'html',
 		data: {
-			title: 'TED Talks',
+			title: 'TED Talks Feed',
+			subtitle: 'Explore Recent TED Talks'
 			feedUrl: 'http://feeds.feedburner.com/TEDTalks_video',
 			feed: [],
 			selectedEntry: {},

@@ -4359,8 +4359,12 @@ button.close {
   border: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
+.giga,h1,h2,h3,h4,h5,h6 {
   font-family: Roboto,Helvetica,Helvetica Neue,arial,sans-serif;
+}
+
+.giga {
+  font-size: 44px;
 }
 
 p {
@@ -4370,6 +4374,14 @@ p {
 
 .text--white {
   color: #fff;
+}
+
+.text--light {
+  font-weight: 200;
+}
+
+.text--medium {
+  font-weight: 300;
 }
 
 .btn {
