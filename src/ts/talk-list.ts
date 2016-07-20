@@ -25,7 +25,7 @@ export default {
 			<!-- Show Entire Content if Selected -->
 			<p v-else>{{{ entry.content }}}</p>
 			<!-- Show Link if Selected -->
-			<a v-if="entry == this.$parent.selectedEntry" :href="entry.link" target="_blank">Learn More</a>
+			<!-- <a v-if="entry == this.$parent.selectedEntry" :href="entry.link" target="_blank">Learn More</a> -->
 			<div class="btn-row">
 				<!-- Upper Right Corner Plus Btn -->
 				<a :href="entry.link" class="btn btn-primary btn-action btn-md" :class="{ 'rotate-45' : this.$parent.selectedEntry == entry }" @click.prevent="this.$parent.selectEntry(entry)">+</a>

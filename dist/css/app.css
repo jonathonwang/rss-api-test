@@ -4592,10 +4592,7 @@ img.img-responsive {
 .feed__container .feed__content p {
   margin-top: 25px;
   margin-bottom: 10px;
-}
-
-.feed__container .feed__content p:first-letter {
-  font-size: 150%;
+  font-size: 16px;
 }
 
 .feed__container .feed__header {
